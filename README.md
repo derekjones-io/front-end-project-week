@@ -24,7 +24,7 @@ https://trello.com/b/wUcQBJBf/lambda-notes-derek-jones
 
 ## MVP Features:
 
-- [ ] Display a list of notes
+- [x] Display a list of notes
 - [ ] Create a note with a title and content
 - [ ] View an existing note
 - [ ] Edit an existing note
