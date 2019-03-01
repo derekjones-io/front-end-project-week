@@ -1,5 +1,6 @@
 import React from 'react';
 
+import '../styles/notelist.css';
 import NoteItem from './NoteItem';
 
 const NoteList = props => {
@@ -7,7 +8,7 @@ const NoteList = props => {
     return <NoteItem key={note._id} note={note} />;
   });
 
-  return <div>{renderedList}</div>;
+  return <div className="notelist-container">{renderedList}</div>;
 };
 
 export default NoteList;

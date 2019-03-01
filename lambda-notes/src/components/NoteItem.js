@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './noteitem.css';
+import '../styles/noteitem.css';
 
 const NoteItem = props => {
   return (

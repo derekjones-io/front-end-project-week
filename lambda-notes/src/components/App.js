@@ -1,8 +1,8 @@
 import React from 'react';
 import axios from 'axios';
+import 'normalize.css/normalize.css';
 
-// import './reset.css';
-import './app.css';
+import '../styles/app.css';
 import NoteList from './NoteList';
 import SideBar from './SideBar';
 
