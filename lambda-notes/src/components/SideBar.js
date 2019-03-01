@@ -7,8 +7,8 @@ const SideBar = () => {
   return (
     <div className="sidebar-container">
       <h1>Lambda Notes</h1>
-      <Button />
-      <Button />
+      <Button text="View Your Note" />
+      <Button text="+ Create New Note" />
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .note-item {
-  border-right: 1px solid gray;
-  border-bottom: 1px solid gray;
-  border-left: 1px solid gray;
+  border-right: 1px solid #969696;
+  border-bottom: 1px solid #969696;
+  border-left: 1px solid #969696;
   cursor: pointer;
   width: 100%;
   max-width: 220px;
