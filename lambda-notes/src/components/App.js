@@ -7,6 +7,7 @@ import '../styles/app.css';
 import NoteList from './NoteList';
 import SideBar from './SideBar';
 import CreateNote from './CreateNote';
+import ViewNote from './ViewNote';
 
 class App extends React.Component {
   state = { notes: [] };
@@ -15,18 +16,21 @@ class App extends React.Component {
     this.fetchNotes();
   }
 
-  fetchNotes = async () => {
-    const response = await axios.get(
-      'https://fe-notes.herokuapp.com/note/get/all'
-    );
-
-    this.setState({ notes: response.data });
+  fetchNotes = () => {
+    axios
+      .get('https://fe-notes.herokuapp.com/note/get/all')
+      .then(response => this.setState({ notes: response.data }))
+      .catch(() => alert('Error fetching notes'));
   };
 
   render() {
     return (
       <div className="container">
         <SideBar fetchNotes={this.fetchNotes} />
+        <Route
+          path="/view/:id"
+          render={props => <ViewNote {...props} notes={this.state.notes} />}
+        />
         <Route
           exact
           path="/"

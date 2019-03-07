@@ -4,7 +4,7 @@ import axios from 'axios';
 class CreateNote extends Component {
   state = {
     title: '',
-    content: '',
+    body: '',
   };
 
   onInputChange = event => {
@@ -16,7 +16,7 @@ class CreateNote extends Component {
 
     const note = {
       title: this.state.title,
-      textContent: this.state.content,
+      textBody: this.state.body,
     };
 
     console.log(note);
@@ -24,7 +24,7 @@ class CreateNote extends Component {
     axios
       .post('https://fe-notes.herokuapp.com/note/create', note)
       .then(() => {
-        this.setState({ title: '', content: '' });
+        this.setState({ title: '', body: '' });
       })
       .catch(() => alert('Error adding your note. Please try again!'));
   };
@@ -47,8 +47,8 @@ class CreateNote extends Component {
             rows="10"
             cols="70"
             placeholder="Note Content"
-            name="content"
-            value={this.state.content}
+            name="body"
+            value={this.state.body}
             onChange={this.onInputChange}
           />
           <br />
