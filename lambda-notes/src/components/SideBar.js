@@ -1,14 +1,19 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../styles/sidebar.css';
 import Button from './Button';
 
-const SideBar = () => {
+const SideBar = props => {
   return (
     <div className="sidebar-container">
       <h1>Lambda Notes</h1>
-      <Button text="View Your Notes" />
-      <Button text="+ Create New Note" />
+      <Link to="/" onClick={props.fetchNotes}>
+        <Button text="View Your Notes" />
+      </Link>
+      <Link to="/create">
+        <Button text="+ Create New Note" />
+      </Link>
     </div>
   );
 };

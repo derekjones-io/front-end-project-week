@@ -4,7 +4,7 @@ import '../styles/button.css';
 
 const Button = props => {
   return (
-    <button>
+    <button className="btn navbtn">
       <p>{props.text}</p>
     </button>
   );
