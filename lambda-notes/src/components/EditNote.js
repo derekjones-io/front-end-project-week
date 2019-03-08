@@ -1,11 +1,21 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-class CreateNote extends Component {
+class EditNote extends Component {
   state = {
     title: '',
     body: '',
   };
+
+  componentDidMount() {
+    console.log(this.props.notes);
+    this.props.notes.map(note => {
+      if (this.props.match.params.id === note._id) {
+        console.log(note);
+        this.setState({ title: note.title, body: note.textBody });
+      }
+    });
+  }
 
   onInputChange = event => {
     this.setState({ [event.target.name]: event.target.value });
@@ -14,6 +24,7 @@ class CreateNote extends Component {
   onFormSubmit = event => {
     event.preventDefault();
 
+    const id = this.props.match.params.id;
     const note = {
       title: this.state.title,
       textBody: this.state.body,
@@ -22,17 +33,17 @@ class CreateNote extends Component {
     console.log(note);
 
     axios
-      .post('https://fe-notes.herokuapp.com/note/create', note)
+      .put(`https://fe-notes.herokuapp.com/note/edit/${id}`, note)
       .then(() => {
         this.setState({ title: '', body: '' });
       })
-      .catch(err => alert('Error creating note', err));
+      .catch(err => alert('Error editing note', err));
   };
 
   render() {
     return (
       <div>
-        <h1>Create New Note:</h1>
+        <h1>Edit Note:</h1>
         <form onSubmit={this.onFormSubmit}>
           <input
             required
@@ -42,7 +53,6 @@ class CreateNote extends Component {
             value={this.state.title}
             onChange={this.onInputChange}
           />
-          <br />
           <textarea
             required
             className="textarea-content"
@@ -51,12 +61,11 @@ class CreateNote extends Component {
             value={this.state.body}
             onChange={this.onInputChange}
           />
-          <br />
-          <button>Save</button>
+          <button>Update</button>
         </form>
       </div>
     );
   }
 }
 
-export default CreateNote;
+export default EditNote;
