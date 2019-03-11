@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import '../styles/notelist.css';
+// import '../styles/notelist.css';
 import NoteItem from './NoteItem';
 
 const NoteList = props => {
@@ -13,7 +13,12 @@ const NoteList = props => {
     );
   });
 
-  return <div className="notelist-container">{renderedList}</div>;
+  return (
+    <div className="notelist-container">
+      <h1>Your Notes:</h1>
+      <div className="note-list">{renderedList}</div>
+    </div>
+  );
 };
 
 export default NoteList;

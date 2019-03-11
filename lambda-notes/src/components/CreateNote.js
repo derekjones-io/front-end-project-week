@@ -52,7 +52,7 @@ class CreateNote extends Component {
             onChange={this.onInputChange}
           />
           <br />
-          <button>Save</button>
+          <button className="note-button">Save</button>
         </form>
       </div>
     );

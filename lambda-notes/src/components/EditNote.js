@@ -44,7 +44,7 @@ class EditNote extends Component {
     return (
       <div>
         <h1>Edit Note:</h1>
-        <form onSubmit={this.onFormSubmit}>
+        <form className="note-form" onSubmit={this.onFormSubmit}>
           <input
             required
             className="input-title"
@@ -61,7 +61,7 @@ class EditNote extends Component {
             value={this.state.body}
             onChange={this.onInputChange}
           />
-          <button>Update</button>
+          <button className="note-button">Update</button>
         </form>
       </div>
     );

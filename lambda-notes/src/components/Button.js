@@ -1,12 +1,12 @@
 import React from 'react';
 
-import '../styles/button.css';
+// import '../styles/button.css';
 
 const Button = props => {
   return (
-    <button className="btn navbtn">
-      <p>{props.text}</p>
-    </button>
+    <div className="navbtn">
+      <p className="navbtn-text">{props.text}</p>
+    </div>
   );
 };
 
