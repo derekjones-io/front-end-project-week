@@ -122,15 +122,13 @@ a {
   font-size: 1.6rem;
 }
 
-.modal-body {
+.modal-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: 2.8rem;
-  padding: 40px;
+  padding: 30px;
 }
 
-.modal {
-  margin: 60px;
+.modal-button {
+  padding: 5px 50px;
 }
