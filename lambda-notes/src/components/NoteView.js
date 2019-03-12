@@ -23,12 +23,12 @@ class NoteView extends Component {
     return (
       <div>
         <div className="edit-delete">
-          <p className="edit-delete-text">
+          <div className="edit-delete-text">
             <Link to={`/edit/${this.props.match.params.id}`}>edit</Link>
-          </p>
-          <p className="edit-delete-text">
+          </div>
+          <div className="edit-delete-text">
             <a onClick={this.toggle}>delete</a>
-          </p>
+          </div>
         </div>
         {this.props.notes.map(note => {
           if (this.props.match.params.id === note._id) {

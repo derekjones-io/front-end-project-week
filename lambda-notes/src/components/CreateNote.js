@@ -31,7 +31,7 @@ class CreateNote extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-container">
         <h1>Create New Note:</h1>
         <form onSubmit={this.onFormSubmit}>
           <input

@@ -42,9 +42,9 @@ class EditNote extends Component {
 
   render() {
     return (
-      <div>
+      <div className="form-container">
         <h1>Edit Note:</h1>
-        <form className="note-form" onSubmit={this.onFormSubmit}>
+        <form onSubmit={this.onFormSubmit}>
           <input
             required
             className="input-title"
