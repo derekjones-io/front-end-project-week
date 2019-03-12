@@ -1,0 +1,13 @@
+.sidebar-container {
+  border-right: 1px solid #969696;
+  width: 100%;
+  min-width: 252px;
+  max-width: 252px;
+  padding-left: 10px;
+}
+
+.sidebar-container h1 {
+  font-size: 3.8rem;
+  color: #4a494a;
+  line-height: 0.85;
+}

@@ -1,0 +1,16 @@
+.btn {
+  border-right: 2px solid #969696;
+}
+
+.navbtn {
+  background-color: #2ac0c4;
+  width: 100%;
+  max-width: 230px;
+  height: 50px;
+  margin: 5px 5px 15px 5px;
+}
+
+button p {
+  font-weight: bold;
+  color: white;
+}
